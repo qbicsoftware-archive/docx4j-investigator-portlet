@@ -64,7 +64,10 @@
 			<artifactId>core-utils-lib</artifactId>
 			<version>1.2.1</version>
 		</dependency>
-		
+		<dependency>
+			<groupId>org.docx4j</groupId>
+			<artifactId>docx4j</artifactId>
+		</dependency>
 		
 		
 		
