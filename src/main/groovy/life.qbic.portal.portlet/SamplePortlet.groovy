@@ -56,7 +56,7 @@ class SamplePortlet extends QBiCPortletUI {
 @CompileStatic
 @Log4j2
 class SampleClass {
-    private static String TRANSFORMER_FACTORY_PROCESSOR_XALAN = "org.docx4j.org.apache.xalan.processor.TransformerFactoryImpl";
+    public static String TRANSFORMER_FACTORY_PROCESSOR_XALAN = "org.apache.xalan.processor.TransformerFactoryImpl";
     private static javax.xml.transform.TransformerFactory transformerFactory;
 
     def static simulateInstantiateTransformerFactory() {
@@ -85,6 +85,7 @@ class SampleClass {
                 System.setProperty("javax.xml.transform.TransformerFactory",
                         originalSystemProperty);
             }
+            log.info("reset system property: " + System.getProperty("javax.xml.transform.TransformerFactory"))
         }
     }
 }
